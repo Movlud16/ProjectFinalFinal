@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Systems & Solutions — Zeus Defense</title>
+		<meta
+			name="description"
+			content="Combat-proven, open architecture-based, and interoperable systems for every domain."
+		/>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+			rel="stylesheet"/>
+		<link rel="icon" href="images/Zeus%20Defence%20LOGO.jpeg" type="image/jpeg" />
+
+		<link rel="stylesheet" href="style.css" />
+		<script defer src="index.js?v=20260203b"></script>
+		<style>
+			/* Page specific styles */
+			.page-hero {
+				padding: 120px 0 60px;
+				background-color: #0f172a;
+				color: white;
+				position: relative;
+				overflow: hidden;
+			}
+			.page-hero::before {
+				content: '';
+				position: absolute;
+				top: 0; left: 0; right: 0; bottom: 0;
+				background: linear-gradient(to bottom, rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 1));
+				z-index: 1;
+			}
+			.page-hero-bg {
+				position: absolute;
+				top: 0; left: 0; width: 100%; height: 100%;
+				object-fit: cover;
+				opacity: 0.4;
+			}
+			.page-hero .container {
+				position: relative;
+				z-index: 2;
+			}
+			.systems-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+				gap: 2rem;
+				margin-top: 3rem;
+			}
+			.system-card {
+				background: #1e293b;
+				border-radius: 8px;
+				overflow: hidden;
+				transition: transform 0.2s;
+			}
+			.system-card:hover {
+				transform: translateY(-5px);
+			}
+			.system-card img {
+				width: 100%;
+				height: 200px;
+				object-fit: cover;
+			}
+			.system-content {
+				padding: 1.5rem;
+			}
+			.system-content h3 {
+				color: white;
+				margin-bottom: 0.5rem;
+			}
+			.system-content p {
+				color: #94a3b8;
+				font-size: 0.9rem;
+				line-height: 1.5;
+			}
+		</style>
+	</head>
+	<body class="page-systems">
+		<a class="skip-link" href="#main">Skip to content</a>
+
+		<header class="site-header" data-header>
+			<div class="container header-inner">
+				<a class="brand" href="index.html" aria-label="Zeus Defence home">
+					<img class="brand-logo" src="./images/Zeus.logo.jpeg" alt="Zeus Defence" decoding="async" />
+					<span class="brand-text">ZEUS<span>DEFENSE</span></span>
+				</a>
+
+				<nav class="nav" aria-label="Primary" data-nav>
+					<ul class="nav-list" data-nav-list>
+						<li class="nav-item" data-mega>
+							<button class="nav-link" type="button" aria-expanded="false" data-mega-toggle>
+								Technologies
+								<span class="chev" aria-hidden="true"></span>
+							</button>
+							<div class="mega" role="region" aria-label="Technologies" data-mega-panel>
+								<div class="mega-grid">
+									<div class="mega-col">
+										<p class="mega-title">Domains</p>
+										<a class="mega-link" href="index.html#domains">Air & Missile Defense</a>
+										<a class="mega-link" href="index.html#domains">Land Warfare</a>
+										<a class="mega-link" href="index.html#domains">Air & Space</a>
+										<a class="mega-link" href="index.html#domains">Naval Warfare</a>
+										<a class="mega-link" href="index.html#domains">Intelligence & Cyber</a>
+									</div>
+									<div class="mega-col">
+										<p class="mega-title">Topics</p>
+										<a class="mega-link" href="systems-solutions.html">Systems & Solutions</a>
+										<a class="mega-link" href="news-highlights.html">News & Highlights</a>
+										<a class="mega-link" href="global-footprint.html">Global Footprint</a>
+										<a class="mega-link" href="contact.html">Contact</a>
+									</div>
+									<div class="mega-card" aria-label="Systems highlight">
+										<p class="mega-card-kicker">Featured</p>
+										<p class="mega-card-title">Multi-domain readiness</p>
+										<p class="mega-card-text">
+											Explore a clean, content-forward layout with responsive mega navigation.
+										</p>
+										<a class="btn btn-ghost" href="systems-solutions.html">Discover systems</a>
+									</div>
+								</div>
+							</div>
+						</li>
+
+						<li class="nav-item" data-mega>
+							<button class="nav-link" type="button" aria-expanded="false" data-mega-toggle>
+								Our Story
+								<span class="chev" aria-hidden="true"></span>
+							</button>
+							<div class="mega" role="region" aria-label="Our Story" data-mega-panel>
+								<div class="mega-grid">
+									<div class="mega-col">
+										<p class="mega-title">Company</p>
+										<a class="mega-link" href="index.html#about">Who we are</a>
+										<a class="mega-link" href="index.html#about">Leadership</a>
+										<a class="mega-link" href="index.html#about">Ethics & compliance</a>
+										<a class="mega-link" href="index.html#careers">Careers</a>
+									</div>
+									<div class="mega-col">
+										<p class="mega-title">Explore</p>
+										<a class="mega-link" href="news-highlights.html">News</a>
+										<a class="mega-link" href="systems-solutions.html">Systems</a>
+										<a class="mega-link" href="global-footprint.html">Global footprint</a>
+										<a class="mega-link" href="contact.html">Contact</a>
+									</div>
+									<div class="mega-card" aria-label="Innovation highlight">
+										<p class="mega-card-kicker">Template</p>
+										<p class="mega-card-title">Content-first storytelling</p>
+										<p class="mega-card-text">
+											A section rhythm similar to the reference site, with your own content and visuals.
+										</p>
+										<a class="btn btn-ghost" href="news-highlights.html">View updates</a>
+									</div>
+								</div>
+							</div>
+						</li>
+
+						<li class="nav-item"><a class="nav-link" href="news-highlights.html">News</a></li>
+						<li class="nav-item"><a class="nav-link" href="systems-solutions.html">Systems</a></li>
+						<li class="nav-item"><a class="nav-link" href="global-footprint.html">Global footprint</a></li>
+						<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+					</ul>
+				</nav>
+
+				<div class="header-actions">
+					<button class="icon-btn" type="button" aria-label="Search" data-search-open>
+						<span class="icon" aria-hidden="true">⌕</span>
+					</button>
+					<div class="lang-switch" data-lang-switch>
+						<button
+							class="lang"
+							type="button"
+							aria-label="Language"
+							aria-haspopup="menu"
+							aria-expanded="false"
+							aria-controls="lang-menu"
+							data-lang-btn
+						>
+							EN
+						</button>
+						<div class="lang-menu" id="lang-menu" role="menu" hidden data-lang-menu>
+							<button class="lang-option" type="button" role="menuitem" data-lang-option data-lang-code="EN">English</button>
+							<button class="lang-option" type="button" role="menuitem" data-lang-option data-lang-code="AZ">Azerbaijani</button>
+							<button class="lang-option" type="button" role="menuitem" data-lang-option data-lang-code="HE">Hebrew</button>
+							<button class="lang-option" type="button" role="menuitem" data-lang-option data-lang-code="PT">Portugal</button>
+							<button class="lang-option" type="button" role="menuitem" data-lang-option data-lang-code="AR">Arabic</button>
+							<button class="lang-option" type="button" role="menuitem" data-lang-option data-lang-code="DE">German</button>
+							<button class="lang-option" type="button" role="menuitem" data-lang-option data-lang-code="TR">Turkish</button>
+						</div>
+					</div>
+					<a class="btn btn-primary" href="contact.html">Get in touch</a>
+					<button
+						class="icon-btn burger"
+						type="button"
+						aria-label="Open menu"
+						aria-controls="mobile-drawer"
+						aria-expanded="false"
+						data-drawer-open
+					>
+						<span class="burger-lines" aria-hidden="true"></span>
+					</button>
+				</div>
+			</div>
+		</header>
+
+		<aside class="drawer" id="mobile-drawer" aria-hidden="true" data-drawer>
+			<div class="drawer-top">
+				<p class="drawer-title">Menu</p>
+				<button class="icon-btn" type="button" aria-label="Close menu" data-drawer-close>
+					<span class="icon" aria-hidden="true">×</span>
+				</button>
+			</div>
+			<div class="drawer-body">
+				<nav class="drawer-nav" aria-label="Mobile">
+					<button class="drawer-accordion" type="button" aria-expanded="false" aria-controls="drawer-panel-tech" data-drawer-acc>
+						Technologies
+						<span class="chev" aria-hidden="true"></span>
+					</button>
+					<div class="drawer-panel" id="drawer-panel-tech">
+						<a href="index.html#domains">Air & Missile Defense</a>
+						<a href="index.html#domains">Land Warfare</a>
+						<a href="index.html#domains">Air & Space</a>
+						<a href="index.html#domains">Naval Warfare</a>
+						<a href="index.html#domains">Intelligence & Cyber</a>
+						<a href="systems-solutions.html">Systems &amp; Solutions</a>
+						<a href="news-highlights.html">News &amp; Highlights</a>
+						<a href="global-footprint.html">Global Footprint</a>
+						<a href="contact.html">Contact</a>
+					</div>
+
+					<button class="drawer-accordion" type="button" aria-expanded="false" aria-controls="drawer-panel-story" data-drawer-acc>
+						Our Story
+						<span class="chev" aria-hidden="true"></span>
+					</button>
+					<div class="drawer-panel" id="drawer-panel-story">
+						<a href="index.html#about">Who we are</a>
+						<a href="index.html#about">Leadership</a>
+						<a href="index.html#about">Ethics &amp; compliance</a>
+						<a href="index.html#careers">Careers</a>
+						<a href="news-highlights.html">News</a>
+						<a href="systems-solutions.html">Systems</a>
+						<a href="global-footprint.html">Global footprint</a>
+						<a href="contact.html">Contact</a>
+					</div>
+
+					<a class="drawer-link" href="news-highlights.html">News</a>
+					<a class="drawer-link" href="systems-solutions.html">Systems</a>
+					<a class="drawer-link" href="global-footprint.html">Global footprint</a>
+					<a class="drawer-link" href="contact.html">Contact</a>
+
+					<div class="drawer-cta">
+						<button class="btn btn-ghost" type="button" data-search-open>Search</button>
+						<a class="btn btn-primary" href="contact.html">Get in touch</a>
+					</div>
+				</nav>
+			</div>
+		</aside>
+
+		<div class="backdrop" hidden data-backdrop></div>
+
+		<div class="search" hidden data-search>
+			<div class="search-panel" role="dialog" aria-modal="true" aria-label="Site search">
+				<div class="search-top">
+					<p class="search-title">Search</p>
+					<button class="icon-btn" type="button" aria-label="Close search" data-search-close>
+						<span class="icon" aria-hidden="true">×</span>
+					</button>
+				</div>
+				<form class="search-form" data-search-form>
+					<label class="sr-only" for="q">Search query</label>
+					<input id="q" name="q" type="search" placeholder="Search systems, news, topics…" autocomplete="off" />
+					<button class="btn btn-primary" type="submit">Search</button>
+				</form>
+				<div class="search-suggestions" aria-label="Search suggestions">
+					<button class="chip" type="button" data-chip>Air defense</button>
+					<button class="chip" type="button" data-chip>Radar</button>
+					<button class="chip" type="button" data-chip>Autonomy</button>
+					<button class="chip" type="button" data-chip>News</button>
+				</div>
+				<p class="search-note">Behavior: searches highlight matching sections on this page.</p>
+			</div>
+		</div>
+
+		<main id="main">
+			<section class="page-hero">
+				<img src="images/3-EliT.png" alt="Systems Background" class="page-hero-bg">
+				<div class="container">
+					<p class="kicker" style="color: #3b82f6; font-weight: 600;">Technologies</p>
+					<h1 style="font-size: 3rem; margin-top: 0.5rem; max-width: 800px;">Systems & Solutions</h1>
+					<p style="font-size: 1.25rem; color: #cbd5e1; max-width: 600px; margin-top: 1rem;">
+						Advanced capability across all domains, ensuring operational superiority for modern defense needs.
+					</p>
+				</div>
+			</section>
+
+			<section class="band">
+				<div class="container">
+					<div class="section-head">
+						<h2>Featured Systems</h2>
+						<p>Explore our cutting-edge defense solutions.</p>
+					</div>
+
+					<div class="systems-grid">
+						<article class="system-card">
+							<img src="images/IRON_BEAM_450.png" alt="Orion Beam" loading="lazy">
+							<div class="system-content">
+								<h3>ORION BEAM™</h3>
+								<p>High Energy Laser Weapon System designed for interception of aerial threats at speed of light.</p>
+							</div>
+						</article>
+						<article class="system-card">
+							<img src="images/Protaction-Suit_Wire_Holo_765X598.png" alt="Shield APS" loading="lazy">
+							<div class="system-content">
+								<h3>SHIELD APS</h3>
+								<p>The World’s Only Operational Active Protection System, providing survivability for combat vehicles.</p>
+							</div>
+						</article>
+						<article class="system-card">
+							<img src="images/Spike_Nlos_Live_Fire_Demonstration-scaled.jpg" alt="Sky Dome" loading="lazy">
+							<div class="system-content">
+								<h3>SKY DOME Family</h3>
+								<p>Comprehensive short-range air defense concepts for engaging evolving threats.</p>
+							</div>
+						</article>
+						<article class="system-card">
+							<img src="images/3-EliT.png" alt="Spear NLOS" loading="lazy">
+							<div class="system-content">
+								<h3>SPEAR NLOS</h3>
+								<p>Long-range strike capability, delivering precise firepower from a safe distance.</p>
+							</div>
+						</article>
+						<article class="system-card">
+							<img src="./images/Icestrike-300x161.jpg" alt="Ice Strike" loading="lazy">
+							<div class="system-content">
+								<h3>ICE STRIKE</h3>
+								<p>Stand-off engagement solution for high-value targets in complex environments.</p>
+							</div>
+						</article>
+						<article class="system-card">
+							<img src="./images/ICE BREAKER™ – BREAKER™_ Advanced, Long-Range Strike Capability_files/Litening-4.jpg" alt="Air Superiority" loading="lazy">
+							<div class="system-content">
+								<h3>Air Superiority Suite</h3>
+								<p>Next-generation avionics and sensor suites for manned and unmanned aerial platforms.</p>
+							</div>
+						</article>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<div class="footer-subscribe">
+				<div class="container footer-subscribe-inner">
+					<div>
+						<p class="footer-kicker">Subscribe to our newsletter</p>
+						<p class="footer-subtitle">Stay up to date with latest news and events</p>
+					</div>
+					<form class="footer-form" data-newsletter>
+						<label class="sr-only" for="newsletter-email">Email</label>
+						<input id="newsletter-email" name="email" type="email" placeholder="Email *" required />
+						<button class="btn btn-primary" type="submit">Go</button>
+					</form>
+				</div>
+			</div>
+			<div class="container footer-grid">
+				<div>
+					<a class="brand footer-brand" href="#" aria-label="Astra Defense home">
+						<img
+							class="brand-logo"
+							src="./images/Zeus.logo.jpeg"
+							alt="Zeus Defense"
+							loading="lazy"
+							decoding="async"
+						/>
+						<span class="brand-text">ZEUS<span>DEFENSE</span></span>
+					</a>
+					<p class="footer-text">
+						ZEUS Advanced Defense Systems CJSC. <br> Official Website of ZEUS ADS CJSC .
+					</p>
+				</div>
+
+				<div class="footer-cols">
+					<div class="footer-col">
+						<p class="footer-title">Explore</p>
+						<a href="index.html#domains">Technologies</a>
+						<a href="systems-solutions.html">Systems</a>
+						<a href="news-highlights.html">News</a>
+					</div>
+					<div class="footer-col">
+						<p class="footer-title">Company</p>
+						<a href="index.html#about">Our story</a>
+						<a href="global-footprint.html">Global footprint</a>
+						<a href="contact.html">Contact</a>
+					</div>
+					<div class="footer-col">
+						<p class="footer-title">Legal</p>
+						<a href="#">Privacy</a>
+						<a href="#">Terms</a>
+						<a href="#">Accessibility</a>
+					</div>
+				</div>
+			</div>
+			<div class="container footer-bottom">
+				<p>© <span data-year></span> ZEUS Defense. All rights reserved.</p>
+				<div class="footer-bottom-right">
+					<a href="#" class="to-top" data-to-top>Back to top</a>
+					<nav class="footer-social" aria-label="Social links">
+							<!-- Social links -->
+						<a class="social-link" href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+							<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
+								<path fill="currentColor" d="M4.98 3.5c0 1.38-1.11 2.5-2.48 2.5S0 4.88 0 3.5 1.11 1 2.5 1s2.48 1.12 2.48 2.5ZM.5 23.5h4V7.98h-4V23.5ZM8 7.98h3.83v2.12h.05c.53-1 1.83-2.06 3.76-2.06 4.02 0 4.76 2.65 4.76 6.1v9.36h-4v-8.3c0-1.98-.04-4.52-2.76-4.52-2.76 0-3.18 2.16-3.18 4.39v8.43H8V7.98Z"/>
+							</svg>
+						</a>
+						<a class="social-link" href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+							<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
+								<rect x="6" y="6" width="12" height="12" rx="3" ry="3" fill="none" stroke="currentColor" stroke-width="2" />
+								<circle cx="12" cy="12" r="3.5" fill="none" stroke="currentColor" stroke-width="2" />
+								<circle cx="16.7" cy="7.3" r="1" fill="currentColor" />
+							</svg>
+						</a>
+						<a class="social-link" href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X">
+							<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
+								<path d="M6 6l12 12" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" />
+								<path d="M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" />
+							</svg>
+						</a>
+						<a class="social-link" href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+							<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
+								<path d="M14 8.5V7.2c0-1.1.9-2 2-2h1.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+								<path d="M9.5 12H16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+								<path d="M12.5 21V12c0-2.2 0-3.5 3-3.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+							</svg>
+						</a>
+					</nav>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>

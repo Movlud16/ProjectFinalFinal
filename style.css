@@ -921,10 +921,9 @@ img {
 	color: rgba(255, 255, 255, 0.7);
 	max-width: 70ch;
 }
-
-/* Carousels (horizontal scroll) */
 .carousel {
 	position: relative;
+	--carousel-btn-offset: -30px;
 }
 
 .carousel-track {
@@ -948,16 +947,22 @@ img {
 	scroll-snap-align: start;
 }
 
-/* Updates carousel uses `.news-card` components that also appear in a 12-col grid.
-   Reset grid spanning inside the carousel so cards don't become oversized. */
 #updates .carousel-track > .news-card {
 	grid-column: auto;
 }
 
-/* Updates cards: don't let media/content force track overflow */
 .news-card,
 .sys-card {
 	overflow: hidden;
+}
+
+.sys-card {
+	display: flex;
+	flex-direction: column;
+}
+
+.sys-card .card-link {
+	margin-top: auto;
 }
 
 .carousel-btn {
@@ -988,11 +993,11 @@ img {
 }
 
 .carousel [data-carousel-prev] {
-	left: -8px;
+	left: var(--carousel-btn-offset);
 }
 
 .carousel [data-carousel-next] {
-	right: -8px;
+	right: var(--carousel-btn-offset);
 }
 
 /* Domains carousel */
@@ -1436,6 +1441,12 @@ img {
 	border: 1px solid rgba(255, 255, 255, 0.12);
 	background: rgba(255, 255, 255, 0.04);
 	padding: 16px;
+	display: flex;
+	flex-direction: column;
+}
+
+.news-card .card-link {
+	margin-top: auto;
 }
 
 .news-card h3 {
@@ -1579,6 +1590,11 @@ img {
 	border: 1px solid rgba(255, 255, 255, 0.12);
 	background: rgba(255, 255, 255, 0.04);
 	padding: 16px;
+}
+
+.form-title {
+	margin: 0 0 18px;
+	letter-spacing: -0.02em;
 }
 
 .field {
@@ -1899,6 +1915,10 @@ kbd {
 }
 
 @media (max-width: 640px) {
+	.carousel {
+		--carousel-btn-offset: -6px;
+	}
+
 	.header-actions .btn-primary {
 		display: none;
 	}

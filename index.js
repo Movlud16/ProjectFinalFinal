@@ -3,9 +3,11 @@
 */
 
 function qs(sel, root = document) {
+	if (!root || typeof root.querySelector !== "function") return null;
 	return root.querySelector(sel);
 }
 function qsa(sel, root = document) {
+	if (!root || typeof root.querySelectorAll !== "function") return [];
 	return Array.from(root.querySelectorAll(sel));
 }
 
